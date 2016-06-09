@@ -1,9 +1,10 @@
-<ion-view style="" class=" " id="page1" title="Program">
+<ion-view style="" class="" id="program" title="Program">
     <ion-content class="has-header" padding="true">
-        <ion-list class=" " id="program-list2">
-            <ion-item style="" class="  " id="program-list-item7">Item 1</ion-item>
-            <ion-item style="" class="  " id="program-list-item8">Item 2</ion-item>
-            <ion-item style="" class="  " id="program-list-item9">Item 3</ion-item>
+        <ion-list class="" id="program-list2">
+            <ion-item style="" class="" id="program-list-item7" ng-repeat="event in program">
+                <p>{{event.date}}</p>
+                <p>{{event.name}}</p>
+            </ion-item>
         </ion-list>
     </ion-content>
 </ion-view>
