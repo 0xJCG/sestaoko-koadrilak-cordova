@@ -4,6 +4,15 @@ angular.module('app.config', [])
     name: 'DB',
     tables: [
         {
+            name: 'program',
+            columns: [
+                {name: 'id', type: 'integer primary key'},
+                {name: 'name', type: 'text'},
+                {name: 'place', type: 'text'},
+                {name: 'date', type: 'date'}
+            ]
+        },
+        {
             name: 'groups',
             columns: [
                 {name: 'id', type: 'integer primary key'},
