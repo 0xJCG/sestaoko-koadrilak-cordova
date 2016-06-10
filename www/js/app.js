@@ -1,7 +1,10 @@
-angular.module('app', ['ionic', 'ngCordova', 'app.controllers', 'app.routes', 'app.services', 'app.directives'])
+angular.module('app', ['ionic', 'ngCordova', 'app.services', 'app.controllers', 'app.routes', 'app.directives'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, DB) {
+    DB.init();
+
     $ionicPlatform.ready(function() {
+
         if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             cordova.plugins.Keyboard.disableScroll(true);
@@ -9,8 +12,8 @@ angular.module('app', ['ionic', 'ngCordova', 'app.controllers', 'app.routes', 'a
         if (window.StatusBar) {
             StatusBar.styleDefault();
         }
-        db = $cordovaSQLite.openDB("koadrilak.db");
-        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS groups (id INTEGER PRIMARY KEY, name TEXT, bar TEXT, UNIQUE(id, name"));
+        /*db = $cordovaSQLite.openDB("koadrilak.db");
+        $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS groups (id INTEGER PRIMARY KEY, name TEXT, bar TEXT, UNIQUE(id, name");
         $cordovaSQLite.execute(db, "INSERT OR IGNORE INTO groups(id, name) VALUES(1, 'El Lonjil', 'Cha-Cha')");
         $cordovaSQLite.execute(db, "INSERT OR IGNORE INTO groups(id, name) VALUES(2, 'Nahasketa', 'Tres Globos')");
         $cordovaSQLite.execute(db, "INSERT OR IGNORE INTO groups(id, name) VALUES(3, 'Sainscuicsuisers', 'Bost')");
@@ -46,6 +49,6 @@ angular.module('app', ['ionic', 'ngCordova', 'app.controllers', 'app.routes', 'a
         $cordovaSQLite.execute(db, "INSERT OR IGNORE INTO groups(id, name) VALUES(33, 'Markonzaga', 'Taita')");
         $cordovaSQLite.execute(db, "INSERT OR IGNORE INTO groups(id, name) VALUES(34, 'Alcohol Viajes', 'Cha-Cha')");
         $cordovaSQLite.execute(db, "INSERT OR IGNORE INTO groups(id, name) VALUES(35, 'Iturri', 'Tito's')");
-        $cordovaSQLite.execute(db, "INSERT OR IGNORE INTO groups(id, name) VALUES(36, 'La Mosca Gao', 'Terraco')");
+        $cordovaSQLite.execute(db, "INSERT OR IGNORE INTO groups(id, name) VALUES(36, 'La Mosca Gao', 'Terraco')");*/
     });
 })

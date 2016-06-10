@@ -6,7 +6,7 @@
         <title>Sestaoko Koadrilak</title>
 
         <script src="lib/ionic/js/ionic.bundle.js"></script>
-        <script src="js/ng-cordova.min.js"></script>
+        <script src="lib/ng-cordova.min.js"></script>
         <script src="cordova.js"></script>
 
         <link href="lib/ionic/css/ionic.css" rel="stylesheet">
@@ -32,7 +32,59 @@
             }
         </style>
 
+        <script>
+            /*var db = null;
+
+            function onLoad() {
+                document.addEventListener("deviceready", onDeviceReady, false);
+            }
+
+            function onDeviceReady() {
+                db = window.openDatabase('koadrilak.db', '1.0', 'Koadrilak DB', 2 * 1024 * 1024);
+                db.transaction(function (tx) {
+                    tx.executeSql("CREATE TABLE IF NOT EXISTS groups (id INTEGER PRIMARY KEY, name TEXT, bar TEXT");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(1, 'El Lonjil', 'Cha-Cha')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(2, 'Nahasketa', 'Tres Globos')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(3, 'Sainscuicsuisers', 'Bost')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(4, '+ Betún', 'La Roca')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(5, 'Jo-Ta-Ke', 'Zipi Zape')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(6, 'Peña en Almíbar', 'Brenes')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(7, 'BMW', 'Ammi')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(8, 'Kalim8', 'Castañares')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(9, 'La Huevera', 'Bock')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(10, 'Abedules', 'Centro Gallego')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(11, 'Los Txikitos', 'La Parada')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(12, 'Ulertezinak', 'La Terraza')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(13, 'Tropezón', 'El Chiringuito')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(14, 'Potones', 'Pale Ale')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(15, 'Peta Zetas', 'Vda. de Valdo')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(16, 'Zapaburus', 'Metro Café')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(17, 'Los Aketes', 'Albadelri')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(18, 'Drink Team', 'La Taberna del Abuelo')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(19, 'Katxitomia', 'Kokolo')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(20, 'Superbebientes', 'El Córner')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(21, 'Kotxe Eskoba', 'Harley')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(22, 'Txoootx', 'Terraco')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(23, 'Juerga de Tronos', 'El Taller de Santiago')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(24, 'Katxiondos', 'El Rincón de María')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(25, 'Tímid@s', 'Tito's')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(26, 'La Caña Verde', 'Mayte')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(27, 'Jarri Potes', 'Pale Ale')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(28, 'Noche & Galbana', 'Bost')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(29, 'Punto de Encuentro', 'Punto de Encuentro')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(30, 'Vigilantes de la Barra', 'Centro Gallego')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(31, 'The Parranda', 'Dúplex')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(32, 'Amestezinak', 'Jai Alai')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(33, 'Markonzaga', 'Taita')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(34, 'Alcohol Viajes', 'Cha-Cha')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(35, 'Iturri', 'Tito's')");
+                    tx.executeSql("INSERT OR IGNORE INTO groups(id, name) VALUES(36, 'La Mosca Gao', 'Terraco')");
+                });
+            }*/
+        </script>
+
         <script src="js/app.js"></script>
+        <script src="js/config.js"></script>
         <script src="js/controllers.js"></script>
         <script src="js/routes.js"></script>
         <script src="js/services.js"></script>

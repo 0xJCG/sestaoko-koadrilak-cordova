@@ -39,5 +39,5 @@ angular.module('app.routes', [])
         abstract: true
     })
 
-    $urlRouterProvider.otherwise('/program')
+    $urlRouterProvider.otherwise('/menu/program')
 });
