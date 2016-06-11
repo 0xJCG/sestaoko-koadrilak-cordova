@@ -23,7 +23,6 @@ angular.module('app.controllers', ['app.services'])
             var latlng = new google.maps.LatLng(lat, lng);
             marker.setPosition(latlng);
             marker.setMap(map);
-            console.log(event);
         });
     });
 })
