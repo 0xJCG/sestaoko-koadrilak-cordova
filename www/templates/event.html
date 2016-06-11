@@ -1,6 +1,11 @@
 <ion-view style="" class="" id="event" title="Prueba">
     <ion-content class="has-header" padding="true">
-        <p>{{event.date}}</p>
-        <p>{{event.name}}</p>
+        <div class="list card">
+            <div class="item">
+                <h2>{{event.name}}</h2>
+                <p>{{event.place}}</p>
+            </div>
+            <ng-map zoom="19" center="[43.309, -3.007]"></ng-map>
+        </div>
     </ion-content>
 </ion-view>

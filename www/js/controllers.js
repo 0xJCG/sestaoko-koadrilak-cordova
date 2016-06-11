@@ -7,18 +7,23 @@ angular.module('app.controllers', ['app.services'])
     Program.all().then(function(program){
         $scope.program = program;
     });
-
-    /*$scope.select = function(id) {
-        //ToDo
-    }*/
 })
 
-.controller('eventCtrl', function($scope, $stateParams, Program) {
+.controller('eventCtrl', function($scope, $stateParams, Program, NgMap) {
     $scope.event = {};
     $scope.event = null;
 
     Program.getById($stateParams.id).then(function(event){
         $scope.event = event;
+
+        NgMap.getMap().then(function(map) {
+            var marker = new google.maps.Marker({});
+            var lat = 43.308877;
+            var lng = -3.006916;
+            var latlng = new google.maps.LatLng(lat, lng);
+            marker.setPosition(latlng);
+            marker.setMap(map);
+        });
     });
 })
 

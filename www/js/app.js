@@ -1,4 +1,4 @@
-angular.module('app', ['ionic', 'app.services', 'app.controllers', 'app.routes', 'app.directives'])
+angular.module('app', ['ionic', 'ngMap', 'app.services', 'app.controllers', 'app.routes', 'app.directives'])
 
 .run(function($ionicPlatform, DB) {
     DB.init();
