@@ -1,7 +1,16 @@
 <ion-view style="" class="" id="bars" title="Bares">
     <ion-content class="has-header" padding="true">
+        <div class="list list-inset">
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" placeholder="Busca un bar">
+            </label>
+        </div>
         <ion-list class="" id="bars-list3">
-            <ion-item style="" class="" id="bars-list-item10">En desarrollo.</ion-item>
+            <ion-item style="" class="item" id="program-list-item7" ng-repeat="bar in bars" href="#/menu/bars/{{bar.id}}">
+                <p>{{bar.name}}</p>
+                <p>{{bar.place}}</p>
+            </ion-item>
         </ion-list>
     </ion-content>
 </ion-view>

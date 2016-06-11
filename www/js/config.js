@@ -21,6 +21,16 @@ angular.module('app.config', [])
                 {name: 'name', type: 'text'},
                 {name: 'bar', type: 'text'}
             ]
+        },
+        {
+            name: 'bars',
+            columns: [
+                {name: 'id', type: 'integer primary key'},
+                {name: 'name', type: 'text'},
+                {name: 'place', type: 'text'},
+                {name: 'lat', type: 'real'},
+                {name: 'lng', type: 'real'}
+            ]
         }
     ]
 });

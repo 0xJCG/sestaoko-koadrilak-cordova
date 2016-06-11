@@ -8,6 +8,7 @@ angular.module('app.services', ['app.config'])
         self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'database', -1);
         self.query('DROP TABLE IF EXISTS program');
         self.query('DROP TABLE IF EXISTS groups');
+        self.query('DROP TABLE IF EXISTS bars');
 
         angular.forEach(DB_CONFIG.tables, function(table) {
             var columns = [];
@@ -67,6 +68,8 @@ angular.module('app.services', ['app.config'])
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(34, 'Alcohol Viajes', 'Cha-Cha')");
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(35, 'Iturri', 'Tito's')");
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(36, 'La Mosca Gao', 'Terraco')");
+
+        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(1, 'Bost', 'Vicente Blasco Ibáñez, 22', 43.307733, -3.002559)");
     };
 
     self.query = function(query, bindings) {
@@ -135,6 +138,33 @@ angular.module('app.services', ['app.config'])
         return DB.query('SELECT * FROM program WHERE id = ?', [id])
         .then(function(result){
             return DB.fetch(result);
+        });
+    };
+
+    return self;
+})
+
+.factory('Bar', function(DB) {
+    var self = this;
+
+    self.all = function() {
+        return DB.query('SELECT id, name, place FROM bars ORDER BY name ASC')
+        .then(function(result){
+            return DB.fetchAll(result);
+        });
+    };
+
+    self.getById = function(id) {
+        return DB.query('SELECT * FROM bars WHERE id = ?', [id])
+        .then(function(result){
+            return DB.fetch(result);
+        });
+    };
+
+    self.getByName = function(name) {
+        return DB.query('SELECT * FROM bars WHERE name LIKE ? ORDER BY name ASC', [name])
+        .then(function(result){
+            return DB.fetchAll(result);
         });
     };
 

@@ -43,6 +43,16 @@ angular.module('app.routes', [])
         }
     })
 
+    .state('sestaokoKoadrilak.bar', {
+        url: '/bars/:id',
+        views: {
+            'menu': {
+                templateUrl: 'templates/bar.html',
+                controller: 'barCtrl'
+            }
+        }
+    })
+
     .state('sestaokoKoadrilak', {
         url: '/menu',
         templateUrl: 'templates/sestaokoKoadrilak.html',

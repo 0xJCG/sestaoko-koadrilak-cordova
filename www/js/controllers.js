@@ -36,6 +36,29 @@ angular.module('app.controllers', ['app.services'])
     });
 })
    
-.controller('barsCtrl', function($scope) {
+.controller('barsCtrl', function($scope, Bar) {
+    $scope.bars = [];
+    $scope.bars = null;
 
+    Bar.all().then(function(bars){
+        $scope.bars = bars;
+    });
+})
+
+.controller('barCtrl', function($scope, $stateParams, Bar, NgMap) {
+    $scope.bar = {};
+    $scope.bar = null;
+
+    Bar.getById($stateParams.id).then(function(bar){
+        $scope.bar = bar;
+
+        NgMap.getMap().then(function(map) {
+            var marker = new google.maps.Marker({});
+            var lat = bar.lat;
+            var lng = bar.lng;
+            var latlng = new google.maps.LatLng(lat, lng);
+            marker.setPosition(latlng);
+            marker.setMap(map);
+        });
+    });
 })
