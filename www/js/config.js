@@ -9,7 +9,9 @@ angular.module('app.config', [])
                 {name: 'id', type: 'integer primary key'},
                 {name: 'name', type: 'text'},
                 {name: 'place', type: 'text'},
-                {name: 'date', type: 'date'}
+                {name: 'lat', type: 'real'},
+                {name: 'lng', type: 'real'},
+                {name: 'date', type: 'text'}
             ]
         },
         {

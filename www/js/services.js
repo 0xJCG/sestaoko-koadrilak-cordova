@@ -6,6 +6,8 @@ angular.module('app.services', ['app.config'])
 
     self.init = function() {
         self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'database', -1);
+        self.query('DROP TABLE IF EXISTS program');
+        self.query('DROP TABLE IF EXISTS groups');
 
         angular.forEach(DB_CONFIG.tables, function(table) {
             var columns = [];
@@ -19,15 +21,15 @@ angular.module('app.services', ['app.config'])
             console.log('Table ' + table.name + ' created');
         });
 
-        self.query("INSERT OR IGNORE INTO program(id, name, place, date) VALUES(1, 'Presentación de Kuadrillas', '', '')");
-        self.query("INSERT OR IGNORE INTO program(id, name, place, date) VALUES(2, 'Bajada y Concurso de Pancartas', '', '')");
-        self.query("INSERT OR IGNORE INTO program(id, name, place, date) VALUES(3, 'Búsqueda del Tesoro', '', '')");
-        self.query("INSERT OR IGNORE INTO program(id, name, place, date) VALUES(4, 'Competición de Balandros', '', '')");
-        self.query("INSERT OR IGNORE INTO program(id, name, place, date) VALUES(5, 'Bingo Solidario', '', '')");
-        self.query("INSERT OR IGNORE INTO program(id, name, place, date) VALUES(6, 'Aquapark', '', '')");
-        self.query("INSERT OR IGNORE INTO program(id, name, place, date) VALUES(7, 'Concurso de Playback', '', '')");
-        self.query("INSERT OR IGNORE INTO program(id, name, place, date) VALUES(8, 'Concurso Gastronómico', '', '')");
-        self.query("INSERT OR IGNORE INTO program(id, name, place, date) VALUES(9, 'Entrega de Premios y Fin de Fiesta', '', '')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(1, 'Presentación de Kuadrillas', 'Desde el Balcón de la Biblioteca', 43.308877, -3.006916, 'Viernes 24')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(2, 'Bajada y Concurso de Pancartas', 'Desde la Cruz de Kueto', 'Sábado 25')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(3, 'Búsqueda del Tesoro', 'Desde la Plaza San Pedro', 43.308197, -3.006124, 'Domingo 26')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(4, 'Competición de Balandros', 'Pantalán de la Benedicta', 43.314503, -3.007782, 'Lunes 27')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(5, 'Bingo Solidario', 'Recinto de Txosnas', 43.307128, -3.005153, 'Miércoles 29')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(6, 'Aquapark', 'Piscinas de la Benedicta', 43.314353, -3.008904, 'Jueves 30')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(7, 'Concurso de Playback', 'Parque de Markonzaga', 43.305010, -3.008321, 'Viernes 1')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(8, 'Concurso Gastronómico', 'Colegio Público de Kueto', 43.307718, -2.999864, 'Sábado 2')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(9, 'Entrega de Premios y Fin de Fiesta', 'Parque de Markonzaga', 43.305010, -3.008321, 'Domingo 3')");
 
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(1, 'El Lonjil', 'Cha-Cha')");
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(2, 'Nahasketa', 'Tres Globos')");

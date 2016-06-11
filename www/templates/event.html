@@ -5,7 +5,7 @@
                 <h2>{{event.name}}</h2>
                 <p>{{event.place}}</p>
             </div>
-            <ng-map zoom="19" center="[43.309, -3.007]"></ng-map>
+            <ng-map zoom="19" center="[{{event.lat}}, {{event.lng}}]"></ng-map>
         </div>
     </ion-content>
 </ion-view>

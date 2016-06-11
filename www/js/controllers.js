@@ -18,11 +18,12 @@ angular.module('app.controllers', ['app.services'])
 
         NgMap.getMap().then(function(map) {
             var marker = new google.maps.Marker({});
-            var lat = 43.308877;
-            var lng = -3.006916;
+            var lat = event.lat;
+            var lng = event.lng;
             var latlng = new google.maps.LatLng(lat, lng);
             marker.setPosition(latlng);
             marker.setMap(map);
+            console.log(event);
         });
     });
 })
