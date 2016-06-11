@@ -12,7 +12,16 @@ angular.module('app.controllers', ['app.services'])
         //ToDo
     }*/
 })
-   
+
+.controller('eventCtrl', function($scope, $stateParams, Program) {
+    $scope.event = {};
+    $scope.event = null;
+
+    Program.getById($stateParams.id).then(function(event){
+        $scope.event = event;
+    });
+})
+
 .controller('groupsCtrl', function($scope, Group) {
     $scope.groups = [];
     $scope.groups = null;

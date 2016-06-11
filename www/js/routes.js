@@ -13,6 +13,16 @@ angular.module('app.routes', [])
         }
     })
 
+    .state('sestaokoKoadrilak.event', {
+        url: '/program/:id',
+        views: {
+            'menu': {
+                templateUrl: 'templates/event.html',
+                controller: 'eventCtrl'
+            }
+        }
+    })
+
     .state('sestaokoKoadrilak.groups', {
         url: '/groups',
         views: {
