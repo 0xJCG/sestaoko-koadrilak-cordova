@@ -72,16 +72,31 @@ angular.module('app.controllers', ['app.services'])
     $scope.bar = {};
     $scope.bar = null;
 
+    var markers = [];
+
     Bar.getById($stateParams.id).then(function(bar){
         $scope.bar = bar;
 
         NgMap.getMap().then(function(map) {
+            console.log(markers);
+            deleteMarkers();
             var marker = new google.maps.Marker({});
+            markers.push(marker);
             var lat = bar.lat;
             var lng = bar.lng;
             var latlng = new google.maps.LatLng(lat, lng);
-            marker.setPosition(latlng);
-            marker.setMap(map);
+            markers[0].setPosition(latlng);
+            markers[0].setMap(map);
+            console.log(markers);
         });
     });
+
+    function deleteMarkers() {
+        console.log(1111111111);
+        for (var i = 0; i < markers.length; i++) {
+            console.log(1);
+            markers[i].setMap(null);
+        }
+        markers = [];
+    }
 })
