@@ -11,7 +11,8 @@ angular.module('app.config', [])
                 {name: 'place', type: 'text'},
                 {name: 'lat', type: 'real'},
                 {name: 'lng', type: 'real'},
-                {name: 'date', type: 'text'}
+                {name: 'day', type: 'text'},
+                {name: 'hour', type: 'text'}
             ]
         },
         {

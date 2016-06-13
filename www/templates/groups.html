@@ -1,15 +1,16 @@
 <ion-view class="" id="groups" view-title="Kuadrillas">
-    <ion-floating-button click="" has-footer="false" button-color="#2AC9AA" icon="ion-android-arrow-dropdown" iconColor="#fff" text="Ordenar"></ion-floating-button>
-    <ion-floating-menu menu-icon="ion-android-arrow-dropup" menu-open-icon="ion-android-arrow-dropdown">
+    <ion-floating-button click="" has-footer="false" button-color="#33cd5f" icon="ion-android-arrow-dropdown" iconColor="#fff" text="Ordenar"></ion-floating-button>
+    <ion-floating-menu menu-icon="ion-android-arrow-dropup" menu-color="#33cd5f" menu-open-color="#33cd5f" menu-open-icon="ion-android-arrow-dropdown">
         <ion-floating-item icon="ion-ios-grid-view-outline" click="sortBy('id')" text="Por número"></ion-floating-item>
         <ion-floating-item icon="ion-person" click="sortBy('name')" text="Por nombre"></ion-floating-item>
         <ion-floating-item icon="ion-android-bar" click="sortBy('bar')" text="Por bar"></ion-floating-item>
     </ion-floating-menu>
     <ion-content padding="true">
         <ion-list class= manual-list-fullwidth" id="groups-list1">
-            <ion-item class="" id="groups-list-item4" ng-repeat="group in groups | orderBy:propertyName:reverse">
-                <p>{{group.id}}</p>
-                <p>{{group.name}}</p>
+            <ion-item class="item item-icon-left" id="groups-list-item4" class="" ng-repeat="group in groups | orderBy:propertyName:reverse">
+                <!--<img src="" alt="{{group.id}}">-->
+                <i class="icon">{{group.id}}</i>
+                <h2>{{group.name}}</h2>
                 <p>{{group.bar}}</p>
             </ion-item>
         </ion-list>

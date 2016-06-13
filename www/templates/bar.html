@@ -5,7 +5,9 @@
                 <h2>{{bar.name}}</h2>
                 <p>{{bar.place}}</p>
             </div>
-            <ng-map zoom="19" center="[{{bar.lat}}, {{bar.lng}}]"></ng-map>
+            <div class="item item-body">
+                <ng-map zoom="19" center="[{{bar.lat}}, {{bar.lng}}]"></ng-map>
+            </div>
         </div>
     </ion-content>
 </ion-view>
