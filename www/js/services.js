@@ -23,7 +23,7 @@ angular.module('app.services', ['app.config'])
         });
 
         self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(1, 'Presentación de Kuadrillas', 'Desde el Balcón de la Biblioteca', 43.308877, -3.006916, 'Viernes 24')");
-        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(2, 'Bajada y Concurso de Pancartas', 'Desde la Cruz de Kueto', 'Sábado 25')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(2, 'Bajada y Concurso de Pancartas', 'Desde la Cruz de Kueto', 43.308043, -3.001343, 'Sábado 25')");
         self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(3, 'Búsqueda del Tesoro', 'Desde la Plaza San Pedro', 43.308197, -3.006124, 'Domingo 26')");
         self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(4, 'Competición de Balandros', 'Pantalán de la Benedicta', 43.314503, -3.007782, 'Lunes 27')");
         self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, date) VALUES(5, 'Bingo Solidario', 'Recinto de Txosnas', 43.307128, -3.005153, 'Miércoles 29')");
@@ -169,4 +169,22 @@ angular.module('app.services', ['app.config'])
     };
 
     return self;
-});
+})
+
+.directive('loading', ['$http', function($http) {
+    return {
+        restrict: 'A',
+            link: function (scope, element, attrs) {
+                scope.isLoading = function () {
+                return $http.pendingRequests.length > 0;
+            };
+            scope.$watch(scope.isLoading, function (value) {
+                if (value) {
+                    element.removeClass('ng-hide');
+                } else {
+                    element.addClass('ng-hide');
+                }
+            });
+        }
+    };
+}]);

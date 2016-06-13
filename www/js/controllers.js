@@ -1,5 +1,5 @@
 angular.module('app.controllers', ['app.services'])
-  
+
 .controller('programCtrl', function($scope, Program) {
     $scope.program = [];
     $scope.program = null;
@@ -30,12 +30,25 @@ angular.module('app.controllers', ['app.services'])
 .controller('groupsCtrl', function($scope, Group) {
     $scope.groups = [];
     $scope.groups = null;
+    $scope.propertyName = 'id';
+    $scope.reverse = false;
+    $scope.orderMenu = true;
 
     Group.all().then(function(groups){
         $scope.groups = groups;
     });
+
+    $scope.displayMenu = function() {
+        $scope.orderMenu = !$scope.orderMenu;
+    }
+
+    $scope.sortBy = function(propertyName) {
+        $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+        $scope.propertyName = propertyName;
+        $scope.orderMenu = true;
+    };
 })
-   
+
 .controller('barsCtrl', function($scope, Bar) {
     $scope.bars = [];
     $scope.bars = null;
