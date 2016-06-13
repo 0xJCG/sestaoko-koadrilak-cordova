@@ -56,6 +56,16 @@ angular.module('app.controllers', ['app.services'])
     Bar.all().then(function(bars){
         $scope.bars = bars;
     });
+
+    $scope.displayMenu = function() {
+        $scope.orderMenu = !$scope.orderMenu;
+    }
+
+    $scope.sortBy = function(propertyName) {
+        $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+        $scope.propertyName = propertyName;
+        $scope.orderMenu = true;
+    };
 })
 
 .controller('barCtrl', function($scope, $stateParams, Bar, NgMap) {
