@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col text-center">
+        <button class="button button-small button-outline button-balanced" ng-click="goPrevious()"><</button>
+        <button class="button button-small button-outline button-balanced">{{pageNum}} / {{pageCount}}</button>
+        <button class="button button-small button-outline button-balanced" ng-click="goNext()">></button>
+
+    </div>
+    <div class="col text-center">
+        <button class="button button-small button-outline button-balanced" ng-click="zoomIn()">+</button>
+        <button class="button button-small button-outline button-balanced" ng-click="fit()">100%</button>
+        <button class="button button-small button-outline button-balanced" ng-click="zoomOut()">-</button>
+    </div>
+</div>
+
+{{loading}}
+<canvas id="pdf-canvas" class="rotate0"></canvas>

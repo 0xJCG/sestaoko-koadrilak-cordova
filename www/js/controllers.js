@@ -100,3 +100,13 @@ angular.module('app.controllers', ['app.services'])
         markers = [];
     }
 })
+
+.controller('rulesCtrl', function($scope) {
+    //https://github.com/sayanee/angularjs-pdf
+    $scope.pdfUrl = 'static/pdf/normas.pdf';
+    $scope.loading = 'Cargando...';
+
+    $scope.onLoad = function() {
+        $scope.loading = '';
+    }
+})

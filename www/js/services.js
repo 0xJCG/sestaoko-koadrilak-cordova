@@ -157,7 +157,7 @@ angular.module('app.services', ['app.config'])
     var self = this;
 
     self.all = function() {
-        return DB.query('SELECT id, name, day FROM program')
+        return DB.query('SELECT id, name, day, hour FROM program')
         .then(function(result){
             return DB.fetchAll(result);
         });
