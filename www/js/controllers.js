@@ -1,6 +1,10 @@
 angular.module('app.controllers', ['app.services'])
 
-.controller('programCtrl', function($scope, Program) {
+.controller('programCtrl', function($scope, $ionicSideMenuDelegate, Program) {
+    ionic.Platform.ready(function() {
+        $ionicSideMenuDelegate.toggleLeft();
+    });
+
     $scope.program = [];
     $scope.program = null;
 
