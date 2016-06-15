@@ -19,7 +19,6 @@ angular.module('app.services', ['app.config'])
 
             var query = 'CREATE TABLE IF NOT EXISTS ' + table.name + ' (' + columns.join(',') + ')';
             self.query(query);
-            console.log('Table ' + table.name + ' created');
         });
 
         self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, day, hour) VALUES(1, 'Presentación de Kuadrillas', 'Desde el Balcón de la Biblioteca', 43.308877, -3.006916, 'Viernes 24', '20:00')");
@@ -196,6 +195,16 @@ angular.module('app.services', ['app.config'])
             return DB.fetchAll(result);
         });
     };
+
+    return self;
+})
+
+.factory('Marker', function() {
+    var self = this;
+
+    self.marker = new google.maps.Marker({});
+
+    //self.
 
     return self;
 })

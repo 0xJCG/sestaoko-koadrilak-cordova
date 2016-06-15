@@ -9,7 +9,7 @@ angular.module('app.controllers', ['app.services'])
     });
 })
 
-.controller('eventCtrl', function($scope, $stateParams, Program, NgMap) {
+.controller('eventCtrl', function($scope, $stateParams, Program, NgMap, Marker) {
     $scope.event = {};
     $scope.event = null;
 
@@ -17,12 +17,11 @@ angular.module('app.controllers', ['app.services'])
         $scope.event = event;
 
         NgMap.getMap().then(function(map) {
-            var marker = new google.maps.Marker({});
             var lat = event.lat;
             var lng = event.lng;
             var latlng = new google.maps.LatLng(lat, lng);
-            marker.setPosition(latlng);
-            marker.setMap(map);
+            Marker.marker.setPosition(latlng);
+            Marker.marker.setMap(map);
         });
     });
 })
@@ -68,37 +67,21 @@ angular.module('app.controllers', ['app.services'])
     };
 })
 
-.controller('barCtrl', function($scope, $stateParams, Bar, NgMap) {
+.controller('barCtrl', function($scope, $stateParams, Bar, NgMap, Marker) {
     $scope.bar = {};
     $scope.bar = null;
-
-    var markers = [];
 
     Bar.getById($stateParams.id).then(function(bar){
         $scope.bar = bar;
 
         NgMap.getMap().then(function(map) {
-            console.log(markers);
-            deleteMarkers();
-            var marker = new google.maps.Marker({});
-            markers.push(marker);
             var lat = bar.lat;
             var lng = bar.lng;
             var latlng = new google.maps.LatLng(lat, lng);
-            markers[0].setPosition(latlng);
-            markers[0].setMap(map);
-            console.log(markers);
+            Marker.marker.setPosition(latlng);
+            Marker.marker.setMap(map);
         });
     });
-
-    function deleteMarkers() {
-        console.log(1111111111);
-        for (var i = 0; i < markers.length; i++) {
-            console.log(1);
-            markers[i].setMap(null);
-        }
-        markers = [];
-    }
 })
 
 .controller('rulesCtrl', function($scope) {
