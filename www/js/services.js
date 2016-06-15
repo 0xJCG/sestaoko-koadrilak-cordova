@@ -21,7 +21,7 @@ angular.module('app.services', ['app.config'])
             self.query(query);
         });
 
-        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, day, hour) VALUES(1, 'Presentación de Kuadrillas', 'Desde el Balcón de la Biblioteca', 43.308877, -3.006916, 'Viernes 24', '20:00')");
+        self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, day, hour) VALUES(1, 'Presentación de Kuadrillas', 'Desde el Balcón de la Biblioteca', 43.308877, -3.006916, 'Viernes 24 (Zuri Eguna)', '20:00')");
         self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, day, hour) VALUES(2, 'Bajada y Concurso de Pancartas', 'Desde la Cruz de Kueto', 43.308043, -3.001343, 'Sábado 25', '19:30')");
         self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, day, hour) VALUES(3, 'Búsqueda del Tesoro', 'Desde la Plaza San Pedro', 43.308197, -3.006124, 'Domingo 26', '17:30')");
         self.query("INSERT OR IGNORE INTO program(id, name, place, lat, lng, day, hour) VALUES(4, 'Competición de Balandros', 'Pantalán de la Benedicta', 43.314503, -3.007782, 'Lunes 27', '19:00')");

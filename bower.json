@@ -1,7 +1,11 @@
 {
-  "name": "IonicDrawer",
-  "private": "true",
-  "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.0.0-beta.13"
-  }
+  "name": "Sestaoko Koadrilak",
+  "version": "1.0.1",
+  "dependencies": {
+    "ionic": "latest",
+    "ngmap": "latest",
+    "ion-floating-menu": "latest",
+    "angular-pdf": "latest"
+  },
+  "private": "true"
 }
