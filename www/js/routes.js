@@ -67,7 +67,7 @@ angular.module('app.routes', [])
         url: '/menu',
         templateUrl: 'templates/sestaokoKoadrilak.html',
         abstract: true
-    })
+    });
 
-    $urlRouterProvider.otherwise('/menu/program')
+    $urlRouterProvider.otherwise('/menu/program');
 });

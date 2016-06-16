@@ -43,7 +43,7 @@ angular.module('app.controllers', ['app.services'])
 
     $scope.displayMenu = function() {
         $scope.orderMenu = !$scope.orderMenu;
-    }
+    };
 
     $scope.sortBy = function(propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
@@ -62,7 +62,7 @@ angular.module('app.controllers', ['app.services'])
 
     $scope.displayMenu = function() {
         $scope.orderMenu = !$scope.orderMenu;
-    }
+    };
 
     $scope.sortBy = function(propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
@@ -95,5 +95,5 @@ angular.module('app.controllers', ['app.services'])
 
     $scope.onLoad = function() {
         $scope.loading = '';
-    }
-})
+    };
+});

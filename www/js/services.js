@@ -5,7 +5,7 @@ angular.module('app.services', ['app.config'])
     self.db = null;
 
     self.init = function() {
-        self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'database', -1);
+        self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'database', 1024*1024);
         self.query('DROP TABLE IF EXISTS program');
         self.query('DROP TABLE IF EXISTS groups');
         self.query('DROP TABLE IF EXISTS bars');

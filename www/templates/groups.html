@@ -1,4 +1,4 @@
-<ion-view class="" id="groups" view-title="Kuadrillas">
+<ion-view view-title="Kuadrillas">
     <!--https://github.com/pregiotek/ion-floating-menu-->
     <ion-floating-button click="" has-footer="false" button-color="#33cd5f" icon="ion-android-arrow-dropdown" icon-color="#fff" text="Ordenar"></ion-floating-button>
     <ion-floating-menu menu-icon="ion-android-arrow-dropup" menu-color="#33cd5f" menu-open-color="#33cd5f" menu-open-icon="ion-android-arrow-dropdown">
@@ -7,8 +7,8 @@
         <ion-floating-item icon="ion-android-bar" button-color="#7FFFA4" click="sortBy('bar')" icon-color="#fff" text="Por bar"></ion-floating-item>
     </ion-floating-menu>
     <ion-content padding="true">
-        <ion-list class= manual-list-fullwidth" id="groups-list1">
-            <ion-item class="item item-icon-left" id="groups-list-item4" class="" ng-repeat="group in groups | orderBy:propertyName:reverse">
+        <ion-list class= manual-list-fullwidth">
+            <ion-item class="item item-icon-left" ng-repeat="group in groups | orderBy:propertyName:reverse">
                 <i class="icon">{{group.id}}</i>
                 <h2>{{group.name}}</h2>
                 <p>{{group.bar}}</p>

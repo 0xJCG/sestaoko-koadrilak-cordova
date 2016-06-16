@@ -1,22 +1,28 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.jcg.sestaokokoadrilak" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Sestaoko Koadrilak</name>
-    <description>
-        Una aplicación para ayudar a las Kuadrillas de Sestao.
-    </description>
-    <author email="jonathancastrogonzalez@gmail.com" href="https://twitter.com/0xJCG">
-        Jonathan Castro
-    </author>
-    <content src="index.html" />
-    <access origin="*://*.googleapis.com/*" subdomains="true" />
-    <access origin="*" />
-    <plugin name="cordova-plugin-whitelist" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="BackupWebStorage" value="none" />
-    <feature name="StatusBar">
-        <param name="ios-package" onload="true" value="CDVStatusBar" />
-    </feature>
-    <engine name="android" spec="~5.1.1" />
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.jcg.sestaokokoadrilak" version="1.0.1" xmlns="http://www.w3.org/ns/widgets">
+  <name>Sestaoko Koadrilak</name>
+  <description>
+    Una aplicación para ayudar a las Kuadrillas de Sestao.
+  </description>
+  <author email="jonathancastrogonzalez@gmail.com" href="https://twitter.com/0xJCG">
+    Jonathan Castro
+  </author>
+  <content src="index.html"/>
+  <access origin="*.google.com"/>
+  <access origin="*.googleapis.com"/>
+  <access origin="*.gstatic.com"/>
+  <access origin="*.googleusercontent.com"/>
+  <access origin="google.com" subdomains="true"/>
+  <access origin="googleapis.com" subdomains="true"/>
+  <access origin="gstatic.com" subdomains="true"/>
+  <access origin="googleusercontent.com" subdomains="true"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <platform name="android">
+    <preference name="AndroidLaunchMode" value="singleTop"/>
+    <preference name="android-minSdkVersion" value="19"/>
+    <preference name="android-targetSdkVersion" value="23"/>
+  </platform>
 </widget>

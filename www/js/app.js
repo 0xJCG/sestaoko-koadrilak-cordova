@@ -12,4 +12,4 @@ angular.module('app', ['ionic', 'ngMap', 'ion-floating-menu', 'pdf', 'app.servic
             StatusBar.styleDefault();
         }
     });
-})
+});

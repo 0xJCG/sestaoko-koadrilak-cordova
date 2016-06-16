@@ -1,8 +1,8 @@
-<ion-view style="" class="" id="program" title="Programa">
+<ion-view title="Programa">
     <ion-content class="has-header" padding="true">
         <div class="loader" data-loading></div>
-        <ion-list class="list" id="program-list2">
-            <ion-item style="" class="item" id="program-list-item7" ng-repeat="event in program" href="#/menu/program/{{event.id}}">
+        <ion-list class="list">
+            <ion-item class="item" ng-repeat="event in program" href="#/menu/program/{{event.id}}">
                 <h2>{{event.name}}</h2>
                 <p>{{event.day}} a las {{event.hour}}</p>
             </ion-item>

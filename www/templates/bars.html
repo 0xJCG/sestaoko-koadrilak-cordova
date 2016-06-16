@@ -1,4 +1,4 @@
-<ion-view style="" class="" id="bars" title="Bares">
+<ion-view id="bars" title="Bares">
     <ion-header-bar class="bar-subheader item-input-inset">
         <label class="item item-input-wrapper">
             <i class="icon ion-search placeholder-icon"></i>
@@ -11,8 +11,8 @@
         <ion-floating-item icon="ion-android-bar" button-color="#7FFFA4" click="sortBy('name')" icon-color="#fff" text="Por nombre"></ion-floating-item>
     </ion-floating-menu>
     <ion-content class="has-header" padding="true">
-        <ion-list class="" id="bars-list3">
-            <ion-item style="" class="item" id="program-list-item7" ng-repeat="bar in bars | orderBy:propertyName:reverse | filter:filter" href="#/menu/bars/{{bar.id}}">
+        <ion-list>
+            <ion-item class="item" ng-repeat="bar in bars | orderBy:propertyName:reverse | filter:filter" href="#/menu/bars/{{bar.id}}">
                 <h2>{{bar.name}}</h2>
                 <p>{{bar.place}}</p>
             </ion-item>
