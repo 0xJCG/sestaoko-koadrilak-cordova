@@ -85,7 +85,7 @@ angular.module('app.services', ['app.config'])
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(15, 'Harley', 'Vicente Blasco Ibáñez, 20', 43.307809, -3.002870)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(16, 'Kokolo', 'Ramon y Cajal, 1', 43.309424, -3.009055)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(17, 'El Córner', 'Manuel Andrés, 14', 43.307522, -3.006765)");
-        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(18, 'La Taberna del Abuelo', 'Manuel Andrés, 14', 43.307458, -3.006674)");
+        //self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(18, 'La Taberna del Abuelo', 'Manuel Andrés, 14', 43.307458, -3.006674)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(19, 'Albadelri', 'Gran Vía, 3', 43.309749, -3.006870)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(20, 'Metro Café', 'Gran Vía, 12', 43.308889, -3.004874)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(21, 'Vda. de Baldo', 'Las Llanas, 13', 43.309193, -3.008055)");
@@ -113,9 +113,9 @@ angular.module('app.services', ['app.config'])
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(43, 'Ekintza', 'Manuel Andrés, 12', 43.307680, -3.007027)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(44, 'Zruspa', 'Manuel Andrés, 16', 43.307312, -3.006556)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(45, 'La Ola', 'Iparraguirre, 7', 43.307486, -3.007254)");
-        //self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(46, 'La Casa del Pueblo',)");
+        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(46, 'La Casa del Pueblo', 'Manuel Andrés, 14', 43.307458, -3.006674)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(47, 'Jandro', 'Miguel Servet, 9', 43.308695, -2.999625)");
-        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(48, 'Tic Tac', 'Vicente Blasco Ibañez, 4', 43.307722, -3.004719)");
+        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(48, 'Tic-Tac', 'Vicente Blasco Ibañez, 4', 43.307722, -3.004719)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(49, 'Las Cepas', 'Vicente Blasco Ibáñez, 14', 43.307706, -3.003881)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(50, 'La Casa Andaluza', 'Grupo La Humanitaria, 1', 43.308260, -3.002452)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(51, 'Estación Los Hermanos', 'Vicente Blasco Ibañez, 28', 43.307755, -3.002220)");
@@ -138,7 +138,7 @@ angular.module('app.services', ['app.config'])
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(68, 'Plaza', 'Kasko, 2', 43.308972, -3.006771)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(69, 'El Casco', 'Las Llanas, 2', 43.308625, -3.006672)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(70, 'Enbor', 'Conde de Balmaseda, 8', 43.308613, -3.006042)");
-        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(71, 'La Luna Dorada', 'Mendebal, 2', 43.309128, -3.006379)");
+        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(71, 'La Luna Dorada', 'Gran Vía, 4', 43.309128, -3.006379)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(72, 'Hamburgo', 'Gran Vía, 7', 43.309463, -3.006614)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(73, 'Degustación Maribel', 'Gran Vía, 8', 43.309206, -3.006164)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(74, 'La Galería', 'Conde de Balmaseda, 2', 43.309129, -3.005879)");
