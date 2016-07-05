@@ -49,7 +49,7 @@ angular.module('app.services', ['app.config'])
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(16, 'Zapaburus', 'Metro Café')");
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(17, 'Los Aketes', 'Albadelri')");
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(18, 'Drink Team', 'La Taberna del Abuelo')");
-        self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(19, 'Katxitomia', 'Kokolo')");
+        self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(19, 'Katxifornia', 'Kokolo')");
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(20, 'Superbebientes', 'El Córner')");
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(21, 'Kotxe Eskoba', 'Harley')");
         self.query("INSERT OR IGNORE INTO groups(id, name, bar) VALUES(22, 'Txoootx', 'Terraco')");
@@ -85,7 +85,7 @@ angular.module('app.services', ['app.config'])
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(15, 'Harley', 'Vicente Blasco Ibáñez, 20', 43.307809, -3.002870)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(16, 'Kokolo', 'Ramon y Cajal, 1', 43.309424, -3.009055)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(17, 'El Córner', 'Manuel Andrés, 14', 43.307522, -3.006765)");
-        //self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(18, 'La Taberna del Abuelo', 'Manuel Andrés, 14', 43.307458, -3.006674)");
+        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(18, 'La Taberna del Abuelo', 'Conde de Balmaseda, 8', 43.308709, -3.005870)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(19, 'Albadelri', 'Gran Vía, 3', 43.309749, -3.006870)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(20, 'Metro Café', 'Gran Vía, 12', 43.308889, -3.004874)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(21, 'Vda. de Baldo', 'Las Llanas, 13', 43.309193, -3.008055)");
@@ -104,11 +104,11 @@ angular.module('app.services', ['app.config'])
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(34, 'Renu', 'Manuel Andrés, 7', 43.307931, -3.007205)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(35, 'Salmen', 'Juan Tomas de Gandarias, 7', 43.307275, -3.006297)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(36, 'Mesón Alberto', 'Villar y Villate, 11', 43.308205, -3.007467)");
-        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(37, 'Palas', 'Villar y Villate, 3', 43.308403, -3.007194)");
-        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(38, 'Burdin', 'Manuel Andres, 6', 43.308005, -3.007480)");
+        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(37, 'Palas', 'Manuel Andrés, 5', 43.308107, -3.007518)");
+        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(38, 'Burdin', 'Manuel Andrés, 6', 43.308005, -3.007480)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(39, 'Boga-Boga', 'Manuel Andrés, 8', 43.307885, -3.007296)");
-        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(40, 'Perfil', 'Manuel Andres, 8', 43.307823, -3.007239)");
-        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(41, 'River', ' Manuel Andres, 1', 43.308416, -3.008052)");
+        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(40, 'Perfil', 'Manuel Andrés, 8', 43.307823, -3.007239)");
+        self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(41, 'River', ' Manuel Andrés, 1', 43.308416, -3.008052)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(42, 'Salón de Juego Kaiku', 'Iparraguirre, 3', 43.307763, -3.007633)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(43, 'Ekintza', 'Manuel Andrés, 12', 43.307680, -3.007027)");
         self.query("INSERT OR IGNORE INTO bars(id, name, place, lat, lng) VALUES(44, 'Zruspa', 'Manuel Andrés, 16', 43.307312, -3.006556)");

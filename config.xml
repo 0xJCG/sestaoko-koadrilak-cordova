@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.jcg.sestaokokoadrilak" version="1.0.2" xmlns="http://www.w3.org/ns/widgets">
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.jcg.sestaokokoadrilak" version="1.0.4" xmlns="http://www.w3.org/ns/widgets">
   <name>Sestaoko Koadrilak</name>
   <description>
     Una aplicación para ayudar a las Kuadrillas de Sestao.
